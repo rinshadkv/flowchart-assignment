@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Flowchart</title>
+</head>
+<body>
+<h1>Create Flowchart</h1>
+<form th:action="@{/flowcharts/ui/create}" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <button type="submit">Create</button>
+</form>
+<a href="/flowcharts/ui">Back to List</a>
+</body>
+</html>

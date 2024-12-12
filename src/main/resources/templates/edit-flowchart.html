@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit Flowchart</title>
+</head>
+<body>
+<h1>Edit Flowchart</h1>
+<form th:action="@{/flowcharts/ui/{id}/edit(id=${flowchart.id})}" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" th:value="${flowchart.name}" required>
+    <button type="submit">Save</button>
+</form>
+<a href="/flowcharts/ui">Back to List</a>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>View Flowchart</title>
+</head>
+<body>
+<h1 th:text="${flowchart.name}">Flowchart Name</h1>
+<h2>Nodes</h2>
+<ul>
+    <li th:each="node : ${flowchart.nodes}" th:text="${node.label}"></li>
+</ul>
+<h2>Edges</h2>
+<ul>
+    <li th:each="edge : ${flowchart.edges}" th:text="'From ' + ${edge.fromNodeId} + ' to ' + ${edge.toNodeId}"></li>
+</ul>
+<a th:href="@{/flowcharts/ui/{id}/edit(id=${flowchart.id})}">Edit</a>
+<a href="/flowcharts/ui">Back to List</a>
+</body>
+</html>

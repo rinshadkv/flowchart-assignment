@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Flowcharts</title>
+</head>
+<body>
+<h1>Flowcharts</h1>
+<a href="/flowcharts/ui/create">Create New Flowchart</a>
+<ul>
+    <li th:each="flowchart : ${flowcharts}">
+        <a th:href="@{/flowcharts/ui/{id}(id=${flowchart.id})}" th:text="${flowchart.name}"></a>
+        <form th:action="@{/flowcharts/ui/{id}/delete(id=${flowchart.id})}" method="post" style="display: inline;">
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+</ul>
+</body>
+</html>
