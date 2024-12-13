@@ -1,6 +1,6 @@
 # Flowchart Management System
 
-This is a simple system to manage flowcharts consisting of nodes and edges. Each flowchart is represented as a directed
+This is a simple system for managing flowcharts consisting of nodes and edges. Each flowchart is represented as a directed
 graph, where nodes are connected by edges. The system provides basic CRUD operations to manage flowcharts and additional
 features like validation and querying of nodes.
 
@@ -30,6 +30,8 @@ Before running the application, ensure you have the following installed:
 - [Maven](https://maven.apache.org/) (for building the project)
 - [Docker](https://www.docker.com/products/docker-desktop) (optional, for Dockerizing the application)
 - [Swagger UI](https://swagger.io/tools/swagger-ui/) for API testing (optional, integrated into the system)
+- H2 database (for data persistence )
+  
 
 ## Project Setup
 
@@ -79,8 +81,8 @@ The application will be accessible at http://localhost:8080.
 
 ### Deployed link
 
-You can also use the deployed version of the application (hosted on the free-tier, so availability may vary,maybe its
-takes to time to load some contents):
+You can also use the deployed version of the application (hosted on the free tier so  availability may vary, maybe its
+takes time to load some contents):
 https://flowchart-oppq.onrender.com/
 
 ## Swagger Documentation
